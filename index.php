@@ -1,6 +1,6 @@
 <?php
-//$date =  date('Y-m-d', time());
-$date =  date('Y/m/d', time());
+//date = date('Y-m-d', time());
+$date = date('Y/m/d',time());
 echo "The value of \$date: ".$date."<br>";
 
 $tar = "2017/05/24";
@@ -86,7 +86,26 @@ echo "<br>number of slashes= ".$numSlashes;
 		}
 	}
 
-echo "daf";
+	echo "<br>Second Loop<br>";
+
+	for ($i=0; $i < sizeof($year) ; $i++) { 
+		# code...
+		$value=$year[$i];
+		
+		switch ($value) {
+				case $value%100==0 && $value%400!=0:
+					echo "<br>".$value." Not a leap year<br>";
+					break;
+				case $value%4==0:
+					echo $value." leap year2<br>";
+					break;
+				default:
+					echo $value. "is not a leap year<br>";
+					break;
+			//}
+				}
+	}
+
+//echo "daf";
 
 ?>
-
